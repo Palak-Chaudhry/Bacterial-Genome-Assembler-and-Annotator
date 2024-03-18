@@ -22,7 +22,9 @@ This pipeline is a bash script that uses a Conda/Mamba environment with the appr
 
 Next, we recommend you to clone this repository into your local system using either the https option or ssh. For reference, here is how to do it using the https option.
 
->git clone https://github.com/Palak-Chaudhry/Bacterial-Genome-Assembler-and-Annotator.git
+```
+git clone https://github.com/Palak-Chaudhry/Bacterial-Genome-Assembler-and-Annotator.git
+```
 
 Now, that you have this repo cloned and available as a directory in your system, go ahead and create and activate a mamba environment from the yml files provided in the setup directory.
 
@@ -37,10 +39,8 @@ Your paired-end reads, i.e. forward and reverse reads for all your genomes shoul
 
 See example_input/ as a reference below.
 
-example_input/
-
+ example_input/
      SRR20966265_R1.fastq.gz
-     
      SRR20966265_R2.fastq.gz
 
 ### Running the script

@@ -1,4 +1,4 @@
-Bacterial Genome Assembler, Predictor and Annotator 
+# Bacterial Genome Assembler, Predictor and Annotator 
 
 There are two pipelines available here. One for Genome assembly from raw fastq files. And the other for genome annotation from assembled files.
 
@@ -22,11 +22,12 @@ This pipeline is a bash script that uses a Conda/Mamba environment with the appr
 
 Next, we recommend you to clone this repository into your local system using either the https option or ssh. For reference, here is how to do it using the https option.
 
-`git clone https://github.com/Palak-Chaudhry/Bacterial-Genome-Assembler-and-Annotator.git`
+```git clone https://github.com/Palak-Chaudhry/Bacterial-Genome-Assembler-and-Annotator.git```
+
 Now, that you have this repo cloned and available as a directory in your system, go ahead and create and activate a mamba environment from the yml files provided in the setup directory.
 
-`mamba env create environments/geneannotate.yml -n your_env_name
-mamba activate your_env_name`
+```mamba env create environments/geneannotate.yml -n your_env_name
+mamba activate your_env_name```
 
 ## Usage
 ### Preparing your data
@@ -35,32 +36,33 @@ Your paired-end reads, i.e. forward and reverse reads for all your genomes shoul
 
 See example_input/ as a reference below.
 
+```
 example_input/
      SRR20966265_R1.fastq.gz
      SRR20966265_R2.fastq.gz
-
-     
+```
 ### Running the script
+
 In order to see the usage of the script and all required and optional arguments, you can print the help message by typing the following inside the main repo directory
 
 ./assembly_pipeline.sh -h
 
->Usage: bash assembly_pipeline.sh -i <input directory> -o <output directory> -[OPTIONS]
->            Bacterial gene assembly for Illumina short-reads. The options available are:
->                     -i : Input Directory for genome assembly (directory containing raw reads in fastq.gz format)[required]
->                     -o : Output directory for all results [required]
->                     -v : Flag to turn on verbose mode
->                     -h : Print usage instructions
+Usage: `bash assembly_pipeline.sh -i <input directory> -o <output directory> -[OPTIONS]`
+            Bacterial gene assembly for Illumina short-reads. The options available are:
+                     -i : Input Directory for genome assembly (directory containing raw reads in fastq.gz format)[required]
+                     -o : Output directory for all results [required]
+                     -v : Flag to turn on verbose mode
+                     -h : Print usage instructions
 
 ./annotation_pipeline.sh -h
 
->Usage: bash annotation_pipeline.sh -i <input directory> -o <output directory> -[OPTIONS]
->            Bacterial Gene Prediction for Illumina short-reads. The options available are:
->                    -i : Input Directory for genome prediction (directory containing assembled fna)[required]
->                    -o : Output directory for all results [required]
->                    -t : Tool to choose from [prodigal/metageneannotator/glimmer] (defaults to Prodigal)
->                    -v : Flag to turn on verbose mode
->                    -h : Print usage instructions
+Usage: bash annotation_pipeline.sh -i <input directory> -o <output directory> -[OPTIONS]
+            Bacterial Gene Prediction for Illumina short-reads. The options available are:
+                    -i : Input Directory for genome prediction (directory containing assembled fna)[required]
+                    -o : Output directory for all results [required]
+                    -t : Tool to choose from [prodigal/metageneannotator/glimmer] (defaults to Prodigal)
+                    -v : Flag to turn on verbose mode
+                    -h : Print usage instructions
 
 ### Miscellaneous
 

@@ -26,9 +26,9 @@ Next, we recommend you to clone this repository into your local system using eit
 
 Now, that you have this repo cloned and available as a directory in your system, go ahead and create and activate a mamba environment from the yml files provided in the setup directory.
 
-`mamba env create environments/geneannotate.yml -n your_env_name`
-`mamba activate your_env_name`
-
+```  mamba env create environments/geneannotate.yml -n your_env_name
+     mamba activate your_env_name
+```
 ## Usage
 ### Preparing your data
 
@@ -36,10 +36,10 @@ Your paired-end reads, i.e. forward and reverse reads for all your genomes shoul
 
 See example_input/ as a reference below.
 
-`example_input/`
-     `SRR20966265_R1.fastq.gz`
-     `SRR20966265_R2.fastq.gz`
-
+```example_input/
+     SRR20966265_R1.fastq.gz
+     SRR20966265_R2.fastq.gz
+```
 ### Running the script
 
 In order to see the usage of the script and all required and optional arguments, you can print the help message by typing the following inside the main repo directory
@@ -51,10 +51,12 @@ In order to see the usage of the script and all required and optional arguments,
                      -i : Input Directory for genome assembly (directory containing raw reads in fastq.gz format)[required]
                      -o : Output directory for all results [required]
                      -v : Flag to turn on verbose mode
-                     -h : Print usage instructions```
+                     -h : Print usage instructions
+```
 
 ./annotation_pipeline.sh -h
 
+```
 Usage: bash annotation_pipeline.sh -i <input directory> -o <output directory> -[OPTIONS]
             Bacterial Gene Prediction for Illumina short-reads. The options available are:
                     -i : Input Directory for genome prediction (directory containing assembled fna)[required]
@@ -62,7 +64,7 @@ Usage: bash annotation_pipeline.sh -i <input directory> -o <output directory> -[
                     -t : Tool to choose from [prodigal/metageneannotator/glimmer] (defaults to Prodigal)
                     -v : Flag to turn on verbose mode
                     -h : Print usage instructions
-
+```
 ### Miscellaneous
 
 The misc/ folder contains scripts for evaluation of different gene prediction tools using homology based method. Here you can extract the 16S rRNA sequences from your genomes (fasta files present in the outputdir/barrnap forlder). Run these 16S rRNA sequences against BLAST to find your reference bacterial strain. 

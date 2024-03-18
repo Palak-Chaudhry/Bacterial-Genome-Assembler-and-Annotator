@@ -37,12 +37,6 @@ mamba activate your_env_name
 
 Your paired-end reads, i.e. forward and reverse reads for all your genomes should be in a single input folder. Additionally, every read pair should be named as follows - {sample_name}_R1.fastq.gz and {sample_name}_R2.fastq.gz.
 
-See example_input/ as a reference below.
-
- example_input/
-     SRR20966265_R1.fastq.gz
-     SRR20966265_R2.fastq.gz
-
 ### Running the script
 
 In order to see the usage of the script and all required and optional arguments, you can print the help message by typing the following inside the main repo directory
